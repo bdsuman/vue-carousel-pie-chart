@@ -29,7 +29,6 @@ onMounted(()=>{
     autoPlay: true,
     wrapAround: true
   })
-  // interval = setInterval(nextSlide, 5000); // Auto advance every 5 seconds
 })
 onBeforeUnmount(() => {
   carousel.destroy()
@@ -41,9 +40,8 @@ onBeforeUnmount(() => {
   <div class="my-10">
     <input type="text" v-model="newItem">
     <button @click="addNewitem()" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Button
+      Add
     </button>
-
   </div>
   <div class="mx-auto items" id="carousel">
     <div :style="`background-image:url(${item})`" class="item" v-for="(item, index) in items" :key="item">{{ index + 1 }}</div>
